@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="TIER TEST SWORD">
+    <title>TIER TEST - BEDWARS, SKYWARS, BEDFIGHT</title>
+    <link rel="icon" type="image/x-icon" href="https://iili.io/CMr7F0N.jpg">
+    <meta property="og:title" content="TIER TEST SWORD">
+    <meta property="og:description" content="TIER TEST SWORD">
+    <meta property="og:image" content="https://iili.io/CMr7F0N.jpg">
+    <link rel="alternate" href="https://www.ejemplo.com" hreflang="es-MX">
+    <link rel="canonical" href="https://www.ejemplo.com/en" hreflang="en-US">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000d46 0%, #0e023b 50%, #000000 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input {
+            border-radius: 100px;
+            border: 1px solid #d0d0d0;
+            width: 80%;
+            max-width: 250px;
+            height: 35px;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            color: #020202;
+        }
+
+        button {
+            background-color: rgb(16, 134, 0);
+            font-size: 30px;
+            color: #ffffff;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 7px;
+            width: 150px;
+            height: 50px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        p, h1 {
+            text-align: center;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container" style="background-image: linear-gradient(to bottom, #000e36, #002897); box-shadow: 2px 4px 8px rgb(3, 3, 3);">
+        <h1 style="color: rgb(255, 208, 0);">TIER (TESTER)</h1>
+        <input placeholder="LT3" id="entrada" type="text" style="background-image: linear-gradient(to bottom, rgb(189, 189, 189), rgb(255, 255, 255)); border-color: #000000;"><br>
+        <button id="boton" style="background-image: linear-gradient(to bottom, rgb(0, 65, 25), rgb(0, 94, 31)); text-shadow: 5px 2px 3px #000000;">CLICK</button>
+        <p id="resultado" style="font-size: 35px; font-weight: 700;"></p>
+    </div>
+    <div class="card-container" style="background-image: linear-gradient(to bottom, #00054e, #32006b); box-shadow: 2px 4px 8px rgb(0, 0, 0);">
+        <h1 style="color: rgb(255, 208, 0);">TIER EXACTO (TESTER)</h1>
+        <input placeholder="HIGH" id="entrada2" type="text" style="background-image: linear-gradient(to bottom, rgb(189, 189, 189), rgb(255, 255, 255)); border-color: #000000;"><br><br>
+        <button id="boton2" style="background-image: linear-gradient(to bottom, rgb(0, 65, 25), rgb(0, 94, 31)); text-shadow: 5px 2px 3px #000000;">CLICK</button>
+        <p id="resultado2" style="font-size: 35px; font-weight: 700; color: aqua;"></p>
+    </div>
+    <div class="card-container" style="background-image: linear-gradient(to bottom, #700092, #2e003a); box-shadow: 2px 4px 8px rgb(0, 0, 0);">
+        <h1 style="color: rgb(255, 208, 0);">RESULTADOS PVP (FT 5)</h1>
+        <input placeholder="(ganadas)5-3(perdidas)" id="resultadosft5" type="text" style="background-image: linear-gradient(to bottom, rgb(189, 189, 189), rgb(255, 255, 255)); border-color: #000000;"><br><br>
+        <h1 style="color: rgb(255, 208, 0);">skills de pvp 1-100</h1>
+        <input placeholder="86" id="pvpSkills" type="text" style="background-image: linear-gradient(to bottom, rgb(189, 189, 189), rgb(255, 255, 255)); border-color: #000000;"><br><br>
+        
+        <h1 style="color: rgb(255, 208, 0);">skills de agilidad 1-100</h1>
+        <input placeholder="56" id="skills" type="text" style="background-image: linear-gradient(to bottom, rgb(189, 189, 189), rgb(255, 255, 255)); border-color: #000000;"><br><br>
+        
+        <button id="boton3" style="background-image: linear-gradient(to bottom, rgb(0, 65, 25), rgb(0, 94, 31)); text-shadow: 5px 2px 3px #000000;">CLICK</button>
+        <p id="resultado3" style="font-size: 35px; font-weight: 700;"></p>
+        <p id="skillstotal" style="font-size: 35px; font-weight: 700;"></p>
+    </div>
+    <div class="card-container" style="background-image: linear-gradient(to bottom, #910059, #36002d); box-shadow: 2px 4px 8px rgb(0, 0, 0);">
+        <h1 style="color: gold">RESULTADOS</h1>
+        <button id="calcularFinal" style="background-image: linear-gradient(to bottom, rgb(0, 65, 25), rgb(0, 94, 31)); text-shadow: 5px 2px 3px #000000;">CLICK</button>
+        <p id="resultadoFinalTier" style="font-size: 25px; font-weight: 700;"></p>
+        <p id="resultadoFinalAcurrate" style="font-size: 25px; font-weight: 700;"></p>
+        <p id="resultadoFinalHP" style="font-size: 25px; font-weight: 700;"></p>
+        <p id="resultadoSkillsTotal" style="font-size: 35px; font-weight: 700;"></p>
+        <h1 id="resultadoREAL" style="font-weight: 700;"></h1>
+        <h1 style="font-weight: 700; font-size: 20px; color: white;">PROXIMAMENTE: MAS MODOS DE TEST<br>BEDWARS, SKYWARS, BEDFIGHT</h1>
+        <a href="https://wwy-dev.github.io/TIER-TESTING-BLOXD.IO-/" class="link-card" style="font-weight: 700; font-size: 30px; color: rgb(255, 187, 0);">TIER TEST: SWORD (ENTRAR)</a>
+    </div>
+    <footer style="font-size: 25px; color: #d0d0d0;">[CREADO POR WOTUZION]</footer>
+
+    <script>
+        let valoresTier = {
+    "LT5": 3, "HT5": 5, "LT4": 7, "HT4": 9, "LT3": 11,
+    "HT3": 13, "LT2": 15, "HT2": 17, "LT1": 19, "HT1": 21
+};
+let valoresAccurate = {
+    "low": -1,
+    "mid": 0,
+    "high": 1
+};
+let diccionarioNombresTier = {
+    2: "LT5 Low",   
+    3: "LT5 Mid",   
+    4: "LT5 High / HT5 Low",
+    5: "HT5 Mid",   
+    6: "HT5 High / LT4 Low",
+    7: "LT4 Mid",   
+    8: "LT4 High / HT4 Low",
+    9: "HT4 Mid",  
+    10: "HT4 High / LT3 Low",
+    11: "LT3 Mid", 
+    12: "LT3 High / HT3 Low",
+    13: "HT3 Mid", 
+    14: "HT3 High / LT2 Low", 
+    15: "LT2 Mid", 
+    16: "LT2 High / HT2 Low",
+    17: "HT2 Mid", 
+    18: "HT2 High / LT1 Low", 
+    19: "LT1 Mid", 
+    20: "LT1 High / HT1 Low", 
+    21: "HT1 Mid", 
+    22: "HT1 High"
+};
+        let skillsTotalResultados = document.getElementById("skillstotal");
+        let skillsTotalFinalResultados = document.getElementById("resultadoSkillsTotal");
+        let tierCalculado  = false;
+        let acurrateCalculado = false;
+        let resultadoPVPCalculado  = false;
+        let testerTier = document.getElementById("entrada");
+        let botonTier = document.getElementById("boton");
+        let resultadoTier = document.getElementById("resultado");
+        let testerAcurrate = document.getElementById("entrada2");
+        let botonAcurrate = document.getElementById("boton2");
+        let resultadoAcurrate = document.getElementById("resultado2");
+        let resultadosPVP = document.getElementById("resultadosft5");
+        let skillsPVP = document.getElementById("pvpSkills");
+        let skills = document.getElementById("skills");
+        let botonResultadoPVP = document.getElementById("boton3");
+        let mostrarResultadoPVP = document.getElementById("resultado3");
+        let botonFinal = document.getElementById("calcularFinal");
+        let tierFinal = document.getElementById("resultadoFinalTier");
+        let acurrateFinal = document.getElementById("resultadoFinalAcurrate");
+        let resultadoFinal = document.getElementById("resultadoFinalHP");
+        let resultadoDefinitivo = document.getElementById("resultadoREAL");
+        botonTier.addEventListener("click", function () {
+
+            if (testerTier.value.trim() === "") {
+                resultadoTier.innerHTML = "NO PUEDES DEJAR ESTE CAMPO VACIO";
+                resultadoTier.style.color = "red"
+                                    setTimeout(() => {
+                    resultadoTier.innerHTML = "";
+                    }, 2000)
+            } else if (testerTier.value ==="lt5" || testerTier.value ==="lt4" ||testerTier.value ==="lt3" ||testerTier.value ==="lt2" || testerTier.value ==="lt1" || testerTier.value ==="ht5" ||testerTier.value ==="ht4" || testerTier.value ==="ht3" || testerTier.value ==="ht2" ||testerTier.value ==="ht1") {
+                resultadoTier.innerHTML = testerTier.value.toUpperCase();
+                resultadoTier.style.color = "cyan"
+                tierFinal.innerHTML = testerTier.value.toUpperCase();
+                tierFinal.style.color = "cyan"
+                tierCalculado = true;
+                } else {
+                    resultadoTier.innerHTML = "NO ES UN TIER VALIDO";
+                    resultadoTier.style.color = "red"
+                    setTimeout(() => {
+                    resultadoTier.innerHTML = "";
+                    }, 2000)
+                }
+        });
+        botonAcurrate.addEventListener("click", function () {
+            if (testerAcurrate.value.trim() === "") {
+                resultadoAcurrate.innerHTML = "NO PUEDES DEJAR ESTE CAMPO VACIO";
+                resultadoAcurrate.style.color = "red"
+                                    setTimeout(() => {
+                    resultadoAcurrate.innerHTML = "";
+                    }, 2000)
+            } else if(testerAcurrate.value.toLowerCase() === "mid" || testerAcurrate.value.toLowerCase() === "high" ||testerAcurrate.value.toLowerCase() === "low") {
+                 resultadoAcurrate.innerHTML = testerAcurrate.value.toUpperCase();
+                resultadoAcurrate.style.color = "cyan"
+                acurrateFinal.innerHTML = testerAcurrate.value.toUpperCase();
+                acurrateFinal.style.color ="cyan"
+                acurrateCalculado = true;
+            }else {
+                resultadoAcurrate.innerHTML = "NO ES UN TIER EXACTO VALIDO, MID, HIGH, LOW";
+                resultadoAcurrate.style.color = "red"
+                                    setTimeout(() => {
+                    resultadoAcurrate.innerHTML = "";
+                    }, 2000)
+            }
+        })
+        botonResultadoPVP.addEventListener("click", function() {
+    let valPVP = skillsPVP.value.trim();
+    let valSkills = skills.value.trim();
+    let valRes = resultadosPVP.value.trim();
+    if (valRes === "" || valPVP === "" || valSkills === "") {
+        mostrarResultadoPVP.innerHTML = "NO PUEDES DEJAR ESTE CAMPO VACIO";
+        mostrarResultadoPVP.style.color = "red";
+        setTimeout(() => { mostrarResultadoPVP.innerHTML = ""; }, 2000);
+    } else if (isNaN(valPVP) || isNaN(valSkills)) {
+        mostrarResultadoPVP.innerHTML = "NO ES UNA CANTIDAD VALIDA";
+        mostrarResultadoPVP.style.color = "red";
+        setTimeout(() => { mostrarResultadoPVP.innerHTML = ""; }, 2000);
+    } else if (valSkills > 100 || valSkills < 0 || valPVP > 100 || valPVP < 0) {
+    mostrarResultadoPVP.innerHTML = "LAS SKILLS DEBEN ESTAR ENTRE 0 Y 100";
+    mostrarResultadoPVP.style.color = "red";
+    setTimeout(() => { mostrarResultadoPVP.innerHTML = ""; }, 2000);
+
+    } else {
+        let partes = valRes.includes("-") ? valRes.split("-") : valRes.split(" ");
+        let w = parseInt(partes[0]) || 0;
+        let l = parseInt(partes[1]) || 0;
+        if (w > 5 || l > 5 || w < 0 || l < 0) {
+            mostrarResultadoPVP.innerHTML = "EL MÁXIMO DE VICTORIAS O DERROTAS ES 5";
+            mostrarResultadoPVP.style.color = "red";
+            setTimeout(() => { mostrarResultadoPVP.innerHTML = ""; }, 2000);
+            return;
+        }
+        habilidadTotal = w - l; 
+        mostrarResultadoPVP.innerHTML = "DIFERENCIA PVP: " + habilidadTotal;
+        mostrarResultadoPVP.style.color = "cyan";
+        let valorSkills = parseInt(valSkills);
+        let valorPVP =  parseInt(valPVP);
+        skillsPVPAgilidad = valorSkills + valorPVP;
+        skillsTotalResultados.innerHTML = "SKILLS: " + skillsPVPAgilidad;
+        skillsTotalResultados.style.color = "cyan";
+        resultadoPVPCalculado = true;
+        skillsTotalFinalResultados.innerHTML = "SKILLS: " + skillsPVPAgilidad;
+        skillsTotalFinalResultados.style.color = "cyan"
+        resultadoFinal.innerHTML = "DIFERENCIA PVP: "  + habilidadTotal;
+        resultadoFinal.style.color = "cyan";
+    }
+});
+botonFinal.addEventListener("click", function () {
+    if (tierCalculado === false || acurrateCalculado === false || resultadoPVPCalculado === false) {
+        resultadoDefinitivo.innerHTML = "RELLENA TODOS LOS CAMPOS PRIMERO!";
+        resultadoDefinitivo.style.color = "red";
+        setTimeout(() => {
+            resultadoDefinitivo.innerHTML = "";
+        }, 2000);
+        return;
+    }
+    let valtier = testerTier.value.trim().toUpperCase();
+    let valacurrate = testerAcurrate.value.trim().toLowerCase();
+    let puntoBaseTier = valoresTier[valtier] || 0;
+    let puntoAccurate = valoresAccurate[valacurrate] || 0;
+    let posicionInicial = puntoBaseTier + puntoAccurate; 
+    let cambioTiers = 0;
+    let skillFinalval = habilidadTotal;
+    if (skillFinalval === -5) {
+        cambioTiers = 9;
+    } else if (skillFinalval === -4) {
+        cambioTiers = 6;
+    } else if (skillFinalval === -3) {
+        cambioTiers = 4;
+    } else if (skillFinalval === -2) {
+        cambioTiers = 2;
+    } else if (skillFinalval === -1) {
+        cambioTiers = 1;
+    } else if (skillFinalval === 0) {
+        cambioTiers = 0;
+    } else if (skillFinalval === 1) {
+        cambioTiers = -1;
+    } else if (skillFinalval === 2) {
+        cambioTiers = -2;
+    } else if (skillFinalval === 3) {
+        cambioTiers = -4;
+    } else if (skillFinalval === 4) {
+        cambioTiers = -6;
+    } else if (skillFinalval === 5) {
+        cambioTiers = -9;
+    }
+    let bonoSkills = 0;
+    let skillTotal = skillsPVPAgilidad;
+
+    if (skillTotal > 200) {
+        bonoSkills = 5;
+    } else if (skillTotal < 0) {
+        bonoSkills = -5;
+    } else {
+        if (skillTotal >= 190) {
+            bonoSkills = 2;
+        } else if (skillTotal >= 170) {
+            bonoSkills = 1.7;
+        } else if (skillTotal >= 140) {
+            bonoSkills = 1.5;
+        } else if (skillTotal >= 115) {
+            bonoSkills = 1;
+        } else if (skillTotal >= 85 && skillTotal <= 114) {
+            bonoSkills = 0;
+        } else if (skillTotal >= 60) {
+            bonoSkills = -1.5;
+        } else if (skillTotal >= 35) {
+            bonoSkills = -1.7;
+        } else if (skillTotal >= 15) {
+            bonoSkills = -2;
+        } else {
+            bonoSkills = -4;
+        }
+    }
+let posicionFinal = Math.round(posicionInicial + cambioTiers + bonoSkills);
+    if (isNaN(posicionFinal) || posicionFinal < 2) {
+        posicionFinal = 2;
+    } else if (posicionFinal > 22) {
+        posicionFinal = 22;
+    }
+    let tierResultado = diccionarioNombresTier[posicionFinal];
+    resultadoDefinitivo.innerHTML = `TIER OBTENIDO:<br>${tierResultado}`;
+    resultadoDefinitivo.style.color = "gold";
+});
+</script>
+</body>
+</html>
